@@ -1,0 +1,622 @@
+{
+  "model_id": "Qwen/Qwen3.5-4B",
+  "quantization": "nf4",
+  "bnb_compute_dtype": "bfloat16",
+  "load_time_sec": 31.764,
+  "torch_version": "2.8.0",
+  "cuda_device": "Orin",
+  "benchmarks": [
+    {
+      "name": "text_short_32",
+      "prompt": "Give me a short introduction to large language models.",
+      "image_path": null,
+      "max_new_tokens": 32,
+      "greedy": false,
+      "runs": 5,
+      "warmup": 2,
+      "avg_time_sec": 7.902,
+      "avg_tokens": 32,
+      "avg_tps": 4.05,
+      "std_tps": 0.027,
+      "max_gpu_peak_mib": 3455.64,
+      "max_rss_mib": 5977.24,
+      "all_runs": [
+        {
+          "phase": "warmup",
+          "run": 1,
+          "generation_time_sec": 9.047,
+          "output_tokens": 32,
+          "tokens_per_second": 3.537,
+          "response_preview": "**Large Language Models (LLMs)** are a class of artificial intelligence systems designed to understand, generate, and manipulate text. They are built upon **Transformer architectures",
+          "memory": {
+            "process_rss_mib": 5958.69,
+            "cuda_allocated_mib": 3359.24,
+            "cuda_reserved_mib": 4414.0,
+            "cuda_free_mib": 6707.8,
+            "cuda_total_mib": 15652.8,
+            "cuda_max_allocated_mib": 3455.64,
+            "cuda_max_reserved_mib": 4414.0
+          }
+        },
+        {
+          "phase": "warmup",
+          "run": 2,
+          "generation_time_sec": 7.952,
+          "output_tokens": 32,
+          "tokens_per_second": 4.024,
+          "response_preview": "**Large Language Models (LLMs)** are advanced artificial intelligence systems capable of understanding, generating, and manipulating human language. At their core, they are deep learning",
+          "memory": {
+            "process_rss_mib": 5975.22,
+            "cuda_allocated_mib": 3359.24,
+            "cuda_reserved_mib": 4414.0,
+            "cuda_free_mib": 6708.37,
+            "cuda_total_mib": 15652.8,
+            "cuda_max_allocated_mib": 3455.64,
+            "cuda_max_reserved_mib": 4414.0
+          }
+        },
+        {
+          "phase": "measured",
+          "run": 3,
+          "generation_time_sec": 7.927,
+          "output_tokens": 32,
+          "tokens_per_second": 4.037,
+          "response_preview": "**Large Language Models (LLMs)** are advanced artificial intelligence systems designed to understand, generate, and manipulate text. They are a subset of a broader class of",
+          "memory": {
+            "process_rss_mib": 5975.21,
+            "cuda_allocated_mib": 3359.24,
+            "cuda_reserved_mib": 4414.0,
+            "cuda_free_mib": 6713.37,
+            "cuda_total_mib": 15652.8,
+            "cuda_max_allocated_mib": 3455.64,
+            "cuda_max_reserved_mib": 4414.0
+          }
+        },
+        {
+          "phase": "measured",
+          "run": 4,
+          "generation_time_sec": 7.969,
+          "output_tokens": 32,
+          "tokens_per_second": 4.016,
+          "response_preview": "**Large Language Models (LLMs)** are artificial intelligence systems powered by **deep learning** specifically designed to understand, generate, and manipulate text (including code and",
+          "memory": {
+            "process_rss_mib": 5975.21,
+            "cuda_allocated_mib": 3359.24,
+            "cuda_reserved_mib": 4414.0,
+            "cuda_free_mib": 6710.49,
+            "cuda_total_mib": 15652.8,
+            "cuda_max_allocated_mib": 3455.64,
+            "cuda_max_reserved_mib": 4414.0
+          }
+        },
+        {
+          "phase": "measured",
+          "run": 5,
+          "generation_time_sec": 7.836,
+          "output_tokens": 32,
+          "tokens_per_second": 4.084,
+          "response_preview": "**Large Language Models (LLMs)** are advanced AI systems designed to understand, generate, and manipulate language based on extensive patterns observed in vast amounts of text data",
+          "memory": {
+            "process_rss_mib": 5977.19,
+            "cuda_allocated_mib": 3359.24,
+            "cuda_reserved_mib": 4416.0,
+            "cuda_free_mib": 6709.07,
+            "cuda_total_mib": 15652.8,
+            "cuda_max_allocated_mib": 3455.64,
+            "cuda_max_reserved_mib": 4416.0
+          }
+        },
+        {
+          "phase": "measured",
+          "run": 6,
+          "generation_time_sec": 7.862,
+          "output_tokens": 32,
+          "tokens_per_second": 4.07,
+          "response_preview": "**Large Language Models (LLMs)** are advanced artificial intelligence systems designed to understand, generate, and manipulate human language. At their core, they are neural networks",
+          "memory": {
+            "process_rss_mib": 5977.18,
+            "cuda_allocated_mib": 3359.24,
+            "cuda_reserved_mib": 4416.0,
+            "cuda_free_mib": 6707.1,
+            "cuda_total_mib": 15652.8,
+            "cuda_max_allocated_mib": 3455.64,
+            "cuda_max_reserved_mib": 4416.0
+          }
+        },
+        {
+          "phase": "measured",
+          "run": 7,
+          "generation_time_sec": 7.914,
+          "output_tokens": 32,
+          "tokens_per_second": 4.044,
+          "response_preview": "A **Large Language Model (LLM)** is an advanced type of artificial intelligence designed to understand, generate, and manipulate human language with remarkable complexity.\n\nUnlike",
+          "memory": {
+            "process_rss_mib": 5977.24,
+            "cuda_allocated_mib": 3359.24,
+            "cuda_reserved_mib": 4414.0,
+            "cuda_free_mib": 6710.02,
+            "cuda_total_mib": 15652.8,
+            "cuda_max_allocated_mib": 3455.64,
+            "cuda_max_reserved_mib": 4414.0
+          }
+        }
+      ]
+    },
+    {
+      "name": "text_long_256",
+      "prompt": "Explain the key differences between transformer and recurrent neural network architectures in detail.",
+      "image_path": null,
+      "max_new_tokens": 256,
+      "greedy": false,
+      "runs": 3,
+      "warmup": 1,
+      "avg_time_sec": 58.501,
+      "avg_tokens": 256,
+      "avg_tps": 4.376,
+      "std_tps": 0.039,
+      "max_gpu_peak_mib": 3456.07,
+      "max_rss_mib": 5993.3,
+      "all_runs": [
+        {
+          "phase": "warmup",
+          "run": 1,
+          "generation_time_sec": 58.129,
+          "output_tokens": 256,
+          "tokens_per_second": 4.404,
+          "response_preview": "Both **Transformers** and **Recurrent Neural Networks (RNNs)** are foundational architectures in deep learning, primarily designed to handle sequential data (such as time-series data, audio, or natura",
+          "memory": {
+            "process_rss_mib": 5981.7,
+            "cuda_allocated_mib": 3359.24,
+            "cuda_reserved_mib": 4418.0,
+            "cuda_free_mib": 6712.97,
+            "cuda_total_mib": 15652.8,
+            "cuda_max_allocated_mib": 3456.07,
+            "cuda_max_reserved_mib": 4418.0
+          }
+        },
+        {
+          "phase": "measured",
+          "run": 2,
+          "generation_time_sec": 58.319,
+          "output_tokens": 256,
+          "tokens_per_second": 4.39,
+          "response_preview": "While both **Transformers** and **Recurrent Neural Networks **(RNNs) are foundational architectures in deep learning designed to handle sequential data, they rely on fundamentally different mechanisms",
+          "memory": {
+            "process_rss_mib": 5985.05,
+            "cuda_allocated_mib": 3359.24,
+            "cuda_reserved_mib": 4418.0,
+            "cuda_free_mib": 6725.43,
+            "cuda_total_mib": 15652.8,
+            "cuda_max_allocated_mib": 3456.07,
+            "cuda_max_reserved_mib": 4418.0
+          }
+        },
+        {
+          "phase": "measured",
+          "run": 3,
+          "generation_time_sec": 58.091,
+          "output_tokens": 256,
+          "tokens_per_second": 4.407,
+          "response_preview": "Both **Transformers** and **Recurrent Neural Networks (RNNs)** are fundamental architectures in deep learning designed to handle sequential data (like time-series, text, or speech). However, they rely",
+          "memory": {
+            "process_rss_mib": 5993.3,
+            "cuda_allocated_mib": 3359.24,
+            "cuda_reserved_mib": 4418.0,
+            "cuda_free_mib": 6720.84,
+            "cuda_total_mib": 15652.8,
+            "cuda_max_allocated_mib": 3456.07,
+            "cuda_max_reserved_mib": 4418.0
+          }
+        },
+        {
+          "phase": "measured",
+          "run": 4,
+          "generation_time_sec": 59.094,
+          "output_tokens": 256,
+          "tokens_per_second": 4.332,
+          "response_preview": "Transformer and Recurrent Neural Networks (RNNs) are the two dominant paradigms in deep learning for sequential data (like text, time-series, and speech). While both aim to learn dependencies between ",
+          "memory": {
+            "process_rss_mib": 5990.9,
+            "cuda_allocated_mib": 3359.24,
+            "cuda_reserved_mib": 4418.0,
+            "cuda_free_mib": 7782.85,
+            "cuda_total_mib": 15652.8,
+            "cuda_max_allocated_mib": 3456.07,
+            "cuda_max_reserved_mib": 4418.0
+          }
+        }
+      ]
+    },
+    {
+      "name": "text_greedy_64",
+      "prompt": "Give me a short introduction to large language models.",
+      "image_path": null,
+      "max_new_tokens": 64,
+      "greedy": true,
+      "runs": 3,
+      "warmup": 1,
+      "avg_time_sec": 15.446,
+      "avg_tokens": 64,
+      "avg_tps": 4.146,
+      "std_tps": 0.124,
+      "max_gpu_peak_mib": 3455.64,
+      "max_rss_mib": 5988.87,
+      "all_runs": [
+        {
+          "phase": "warmup",
+          "run": 1,
+          "generation_time_sec": 15.239,
+          "output_tokens": 64,
+          "tokens_per_second": 4.2,
+          "response_preview": "**Large Language Models (LLMs)** are advanced artificial intelligence systems designed to understand, generate, and manipulate human language. At their core, they are deep learning models trained on v",
+          "memory": {
+            "process_rss_mib": 5986.9,
+            "cuda_allocated_mib": 3359.24,
+            "cuda_reserved_mib": 4414.0,
+            "cuda_free_mib": 7747.15,
+            "cuda_total_mib": 15652.8,
+            "cuda_max_allocated_mib": 3455.64,
+            "cuda_max_reserved_mib": 4414.0
+          }
+        },
+        {
+          "phase": "measured",
+          "run": 2,
+          "generation_time_sec": 15.98,
+          "output_tokens": 64,
+          "tokens_per_second": 4.005,
+          "response_preview": "**Large Language Models (LLMs)** are advanced artificial intelligence systems designed to understand, generate, and manipulate human language. At their core, they are deep learning models trained on v",
+          "memory": {
+            "process_rss_mib": 5986.89,
+            "cuda_allocated_mib": 3359.24,
+            "cuda_reserved_mib": 4414.0,
+            "cuda_free_mib": 7658.19,
+            "cuda_total_mib": 15652.8,
+            "cuda_max_allocated_mib": 3455.64,
+            "cuda_max_reserved_mib": 4414.0
+          }
+        },
+        {
+          "phase": "measured",
+          "run": 3,
+          "generation_time_sec": 15.253,
+          "output_tokens": 64,
+          "tokens_per_second": 4.196,
+          "response_preview": "**Large Language Models (LLMs)** are advanced artificial intelligence systems designed to understand, generate, and manipulate human language. At their core, they are deep learning models trained on v",
+          "memory": {
+            "process_rss_mib": 5988.87,
+            "cuda_allocated_mib": 3359.24,
+            "cuda_reserved_mib": 4414.0,
+            "cuda_free_mib": 7677.34,
+            "cuda_total_mib": 15652.8,
+            "cuda_max_allocated_mib": 3455.64,
+            "cuda_max_reserved_mib": 4414.0
+          }
+        },
+        {
+          "phase": "measured",
+          "run": 4,
+          "generation_time_sec": 15.104,
+          "output_tokens": 64,
+          "tokens_per_second": 4.237,
+          "response_preview": "**Large Language Models (LLMs)** are advanced artificial intelligence systems designed to understand, generate, and manipulate human language. At their core, they are deep learning models trained on v",
+          "memory": {
+            "process_rss_mib": 5988.85,
+            "cuda_allocated_mib": 3359.24,
+            "cuda_reserved_mib": 4414.0,
+            "cuda_free_mib": 7689.29,
+            "cuda_total_mib": 15652.8,
+            "cuda_max_allocated_mib": 3455.64,
+            "cuda_max_reserved_mib": 4414.0
+          }
+        }
+      ]
+    },
+    {
+      "name": "vl_caption_64",
+      "prompt": "Describe this scene in one concise sentence.",
+      "image_path": "/workspace/Qwen3_5/results/output-0025_1min_frame30.jpg",
+      "max_new_tokens": 64,
+      "greedy": true,
+      "runs": 3,
+      "warmup": 1,
+      "avg_time_sec": 6.174,
+      "avg_tokens": 21,
+      "avg_tps": 3.401,
+      "std_tps": 0.05,
+      "max_gpu_peak_mib": 3534.79,
+      "max_rss_mib": 6172.56,
+      "all_runs": [
+        {
+          "phase": "warmup",
+          "run": 1,
+          "generation_time_sec": 7.77,
+          "output_tokens": 21,
+          "tokens_per_second": 2.703,
+          "response_preview": "Three people are walking along a wide, paved outdoor pathway in a park or public area.\n",
+          "memory": {
+            "process_rss_mib": 6162.09,
+            "cuda_allocated_mib": 3369.74,
+            "cuda_reserved_mib": 4426.0,
+            "cuda_free_mib": 7589.64,
+            "cuda_total_mib": 15652.8,
+            "cuda_max_allocated_mib": 3534.79,
+            "cuda_max_reserved_mib": 4426.0
+          }
+        },
+        {
+          "phase": "measured",
+          "run": 2,
+          "generation_time_sec": 6.275,
+          "output_tokens": 21,
+          "tokens_per_second": 3.346,
+          "response_preview": "Three people are walking along a wide, paved outdoor pathway in a park or public area.\n",
+          "memory": {
+            "process_rss_mib": 6168.0,
+            "cuda_allocated_mib": 3369.74,
+            "cuda_reserved_mib": 4426.0,
+            "cuda_free_mib": 7593.25,
+            "cuda_total_mib": 15652.8,
+            "cuda_max_allocated_mib": 3534.79,
+            "cuda_max_reserved_mib": 4426.0
+          }
+        },
+        {
+          "phase": "measured",
+          "run": 3,
+          "generation_time_sec": 6.147,
+          "output_tokens": 21,
+          "tokens_per_second": 3.416,
+          "response_preview": "Three people are walking along a wide, paved outdoor pathway in a park or public area.\n",
+          "memory": {
+            "process_rss_mib": 6170.77,
+            "cuda_allocated_mib": 3369.74,
+            "cuda_reserved_mib": 4426.0,
+            "cuda_free_mib": 7579.78,
+            "cuda_total_mib": 15652.8,
+            "cuda_max_allocated_mib": 3534.79,
+            "cuda_max_reserved_mib": 4426.0
+          }
+        },
+        {
+          "phase": "measured",
+          "run": 4,
+          "generation_time_sec": 6.101,
+          "output_tokens": 21,
+          "tokens_per_second": 3.442,
+          "response_preview": "Three people are walking along a wide, paved outdoor pathway in a park or public area.\n",
+          "memory": {
+            "process_rss_mib": 6172.56,
+            "cuda_allocated_mib": 3369.74,
+            "cuda_reserved_mib": 4426.0,
+            "cuda_free_mib": 7582.18,
+            "cuda_total_mib": 15652.8,
+            "cuda_max_allocated_mib": 3534.79,
+            "cuda_max_reserved_mib": 4426.0
+          }
+        }
+      ]
+    },
+    {
+      "name": "vl_detail_256",
+      "prompt": "Describe this image in detail. Include information about objects, people, actions, and the environment.",
+      "image_path": "/workspace/Qwen3_5/results/output-0025_1min_frame30.jpg",
+      "max_new_tokens": 256,
+      "greedy": false,
+      "runs": 3,
+      "warmup": 1,
+      "avg_time_sec": 59.658,
+      "avg_tokens": 256,
+      "avg_tps": 4.291,
+      "std_tps": 0.008,
+      "max_gpu_peak_mib": 3536.1,
+      "max_rss_mib": 6170.98,
+      "all_runs": [
+        {
+          "phase": "warmup",
+          "run": 1,
+          "generation_time_sec": 60.209,
+          "output_tokens": 256,
+          "tokens_per_second": 4.252,
+          "response_preview": "This is a high-angle, surveillance-style photograph of an outdoor paved walkway or plaza area, likely captured during daylight under overcast skies. The scene is wide and spacious, with light-colored ",
+          "memory": {
+            "process_rss_mib": 6170.98,
+            "cuda_allocated_mib": 3369.75,
+            "cuda_reserved_mib": 4430.0,
+            "cuda_free_mib": 7553.74,
+            "cuda_total_mib": 15652.8,
+            "cuda_max_allocated_mib": 3536.09,
+            "cuda_max_reserved_mib": 4430.0
+          }
+        },
+        {
+          "phase": "measured",
+          "run": 2,
+          "generation_time_sec": 59.561,
+          "output_tokens": 256,
+          "tokens_per_second": 4.298,
+          "response_preview": "This is an outdoor, daytime surveillance-style image capturing a wide, paved pedestrian walkway or plaza. The scene appears to be in a modern, possibly suburban or park-like development area.\n\n**Envir",
+          "memory": {
+            "process_rss_mib": 6170.98,
+            "cuda_allocated_mib": 3369.75,
+            "cuda_reserved_mib": 4430.0,
+            "cuda_free_mib": 7566.28,
+            "cuda_total_mib": 15652.8,
+            "cuda_max_allocated_mib": 3536.1,
+            "cuda_max_reserved_mib": 4430.0
+          }
+        },
+        {
+          "phase": "measured",
+          "run": 3,
+          "generation_time_sec": 59.637,
+          "output_tokens": 256,
+          "tokens_per_second": 4.293,
+          "response_preview": "This is a high-angle, daytime surveillance-style image of a wide, paved walkway or plaza in what appears to be a modern outdoor area — possibly a university campus, corporate park, or suburban develop",
+          "memory": {
+            "process_rss_mib": 6170.96,
+            "cuda_allocated_mib": 3369.75,
+            "cuda_reserved_mib": 4430.0,
+            "cuda_free_mib": 7529.21,
+            "cuda_total_mib": 15652.8,
+            "cuda_max_allocated_mib": 3536.1,
+            "cuda_max_reserved_mib": 4430.0
+          }
+        },
+        {
+          "phase": "measured",
+          "run": 4,
+          "generation_time_sec": 59.776,
+          "output_tokens": 256,
+          "tokens_per_second": 4.283,
+          "response_preview": "This is an outdoor, daytime scene captured from a high-angle perspective, likely by a security or surveillance camera. The setting appears to be a spacious, paved pedestrian plaza or walkway in a mode",
+          "memory": {
+            "process_rss_mib": 6170.95,
+            "cuda_allocated_mib": 3369.75,
+            "cuda_reserved_mib": 4430.0,
+            "cuda_free_mib": 7433.91,
+            "cuda_total_mib": 15652.8,
+            "cuda_max_allocated_mib": 3536.1,
+            "cuda_max_reserved_mib": 4430.0
+          }
+        }
+      ]
+    },
+    {
+      "name": "quality_intro",
+      "prompt": "Give me a short introduction to large language models.",
+      "image_path": null,
+      "max_new_tokens": 64,
+      "greedy": false,
+      "runs": 1,
+      "warmup": 0,
+      "avg_time_sec": 15.37,
+      "avg_tokens": 64,
+      "avg_tps": 4.164,
+      "std_tps": 0.0,
+      "max_gpu_peak_mib": 3456.64,
+      "max_rss_mib": 6159.0,
+      "all_runs": [
+        {
+          "phase": "measured",
+          "run": 1,
+          "generation_time_sec": 15.37,
+          "output_tokens": 64,
+          "tokens_per_second": 4.164,
+          "response_preview": "A **Large Language Model (LLM)** is an artificial intelligence system designed to understand, analyze, and generate human language. These models are built on **Transformers**, a specific type of neura",
+          "memory": {
+            "process_rss_mib": 6159.0,
+            "cuda_allocated_mib": 3360.24,
+            "cuda_reserved_mib": 4416.0,
+            "cuda_free_mib": 7488.46,
+            "cuda_total_mib": 15652.8,
+            "cuda_max_allocated_mib": 3456.64,
+            "cuda_max_reserved_mib": 4416.0
+          }
+        }
+      ]
+    },
+    {
+      "name": "quality_korean",
+      "prompt": "Answer in Korean with exactly three bullet points: what is overfitting?",
+      "image_path": null,
+      "max_new_tokens": 96,
+      "greedy": false,
+      "runs": 1,
+      "warmup": 0,
+      "avg_time_sec": 22.158,
+      "avg_tokens": 96,
+      "avg_tps": 4.332,
+      "std_tps": 0.0,
+      "max_gpu_peak_mib": 3457.07,
+      "max_rss_mib": 6158.98,
+      "all_runs": [
+        {
+          "phase": "measured",
+          "run": 1,
+          "generation_time_sec": 22.158,
+          "output_tokens": 96,
+          "tokens_per_second": 4.332,
+          "response_preview": "* 오버피팅은 모델이 학습 데이터의 노이즈나 특정 패턴을 지나치게 맞춰서, 새로운 데이터나 실제 상황에서는 정확도가 떨어지는 현상을 말합니다.\n* 이는 훈련 과정에서 모델의 복잡도가 너무 커져서 데이터뿐만 아니라 잡음까지 학습해버렸기 때문에 발생합니다.\n* 오버피팅 문제를 해결하기 위해서는 과적합을 방지하는 정규화 방법, 데이터 증강, 또는 모델의 단순화 ",
+          "memory": {
+            "process_rss_mib": 6158.98,
+            "cuda_allocated_mib": 3360.24,
+            "cuda_reserved_mib": 4416.0,
+            "cuda_free_mib": 7511.73,
+            "cuda_total_mib": 15652.8,
+            "cuda_max_allocated_mib": 3457.07,
+            "cuda_max_reserved_mib": 4416.0
+          }
+        }
+      ]
+    },
+    {
+      "name": "quality_json",
+      "prompt": "Return only valid JSON with keys answer and confidence for the question: What does CPU stand for?",
+      "image_path": null,
+      "max_new_tokens": 64,
+      "greedy": false,
+      "runs": 1,
+      "warmup": 0,
+      "avg_time_sec": 6.511,
+      "avg_tokens": 26,
+      "avg_tps": 3.993,
+      "std_tps": 0.0,
+      "max_gpu_peak_mib": 3457.41,
+      "max_rss_mib": 6161.03,
+      "all_runs": [
+        {
+          "phase": "measured",
+          "run": 1,
+          "generation_time_sec": 6.511,
+          "output_tokens": 26,
+          "tokens_per_second": 3.993,
+          "response_preview": "{\n  \"answer\": \"Central Processing Unit\",\n  \"confidence\": 0.99\n}\n",
+          "memory": {
+            "process_rss_mib": 6161.03,
+            "cuda_allocated_mib": 3360.24,
+            "cuda_reserved_mib": 4416.0,
+            "cuda_free_mib": 7509.11,
+            "cuda_total_mib": 15652.8,
+            "cuda_max_allocated_mib": 3457.41,
+            "cuda_max_reserved_mib": 4416.0
+          }
+        }
+      ]
+    },
+    {
+      "name": "quality_2sent",
+      "prompt": "Summarize why caching is useful in web services in exactly two sentences.",
+      "image_path": null,
+      "max_new_tokens": 80,
+      "greedy": false,
+      "runs": 1,
+      "warmup": 0,
+      "avg_time_sec": 14.858,
+      "avg_tokens": 62,
+      "avg_tps": 4.173,
+      "std_tps": 0.0,
+      "max_gpu_peak_mib": 3457.07,
+      "max_rss_mib": 6161.02,
+      "all_runs": [
+        {
+          "phase": "measured",
+          "run": 1,
+          "generation_time_sec": 14.858,
+          "output_tokens": 62,
+          "tokens_per_second": 4.173,
+          "response_preview": "Caching reduces server load and increases responsiveness by storing frequent or recently accessed data in a fast, local location rather than querying the database or backend every time. This optimizat",
+          "memory": {
+            "process_rss_mib": 6161.02,
+            "cuda_allocated_mib": 3360.24,
+            "cuda_reserved_mib": 4416.0,
+            "cuda_free_mib": 7498.3,
+            "cuda_total_mib": 15652.8,
+            "cuda_max_allocated_mib": 3457.07,
+            "cuda_max_reserved_mib": 4416.0
+          }
+        }
+      ]
+    }
+  ]
+}

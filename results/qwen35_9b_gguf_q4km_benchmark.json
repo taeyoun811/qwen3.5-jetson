@@ -1,0 +1,481 @@
+{
+  "model_path": "models/Qwen3.5-9B-Q4_K_M.gguf",
+  "mmproj_path": "models/mmproj-9B-F16.gguf",
+  "backend": "llama.cpp",
+  "quantization": "Q4_K_M",
+  "ngl": 99,
+  "benchmarks": [
+    {
+      "name": "text_short_32",
+      "prompt": "Give me a short introduction to large language models.",
+      "image_path": null,
+      "max_new_tokens": 32,
+      "greedy": false,
+      "runs": 5,
+      "warmup": 2,
+      "avg_eval_tps": 8.54,
+      "std_eval_tps": 0.055,
+      "avg_tokens": 0,
+      "avg_wall_sec": 10.451,
+      "cuda_model_mib": 5540.0,
+      "avg_prompt_tps": 113.86,
+      "avg_image_tokens": null,
+      "avg_image_encode_ms": null,
+      "avg_image_decode_ms": null,
+      "avg_prompt_eval_ms": null,
+      "avg_prompt_tokens": null,
+      "avg_total_ms": null,
+      "all_runs": [
+        {
+          "wall_time_sec": 11.452,
+          "response_preview": "",
+          "error": "ggml_backend_cuda_buffer_type_alloc_buffer: allocating 4861.28 MiB on device 0: cudaMalloc failed: out of memory\nalloc_tensor_range: failed to allocate CUDA0 buffer of size 5097424896\nllama_model_load: error loading model: unable to allocate CUDA0 buffer\nllama_model_load_from_file_impl: failed to load model\ncommon_init_from_params: failed to load model 'models/Qwen3.5-9B-Q4_K_M.gguf'\nsrv    load_model: failed to load model, 'models/Qwen3.5-9B-Q4_K_M.gguf'\n",
+          "phase": "warmup",
+          "run": 1
+        },
+        {
+          "prompt_tps": 95.8,
+          "eval_tps": 8.5,
+          "cuda_model_mib": 5540.0,
+          "wall_time_sec": 18.854,
+          "response_preview": "arge Language Models (LLMs) are advanced artificial intelligence systems designed to understand, generate, and manipulate human language at scale. Built on deep learning architectures like **",
+          "phase": "warmup",
+          "run": 2
+        },
+        {
+          "prompt_tps": 109.7,
+          "eval_tps": 8.5,
+          "cuda_model_mib": 5540.0,
+          "wall_time_sec": 10.644,
+          "response_preview": "*Large Language Models (LLMs)** are advanced artificial intelligence systems designed to understand, generate, and manipulate human language. They are a type of machine learning model",
+          "phase": "measured",
+          "run": 3
+        },
+        {
+          "prompt_tps": 112.7,
+          "eval_tps": 8.5,
+          "cuda_model_mib": 5540.0,
+          "wall_time_sec": 10.503,
+          "response_preview": "arge Language Models (LLMs) are artificial intelligence systems designed to understand and generate human language. Trained on vast amounts of text data from the internet, books",
+          "phase": "measured",
+          "run": 4
+        },
+        {
+          "prompt_tps": 118.7,
+          "eval_tps": 8.5,
+          "cuda_model_mib": 5540.0,
+          "wall_time_sec": 10.363,
+          "response_preview": "*Large Language Models (LLMs)** are artificial intelligence systems designed to understand, generate, and manipulate human language at a scale and depth never before seen. Think",
+          "phase": "measured",
+          "run": 5
+        },
+        {
+          "prompt_tps": 113.3,
+          "eval_tps": 8.6,
+          "cuda_model_mib": 5540.0,
+          "wall_time_sec": 10.399,
+          "response_preview": "*Large Language Models (LLMs)** are advanced artificial intelligence systems designed to understand, generate, and manipulate human language with remarkable fluency. Built upon the foundation",
+          "phase": "measured",
+          "run": 6
+        },
+        {
+          "prompt_tps": 114.9,
+          "eval_tps": 8.6,
+          "cuda_model_mib": 5540.0,
+          "wall_time_sec": 10.348,
+          "response_preview": "*Large Language Models (LLMs)** are artificial intelligence systems designed to understand, generate, and manipulate human language with remarkable proficiency. Built on deep learning architectures,",
+          "phase": "measured",
+          "run": 7
+        }
+      ]
+    },
+    {
+      "name": "text_long_256",
+      "prompt": "Explain the key differences between transformer and recurrent neural network architectures in detail.",
+      "image_path": null,
+      "max_new_tokens": 256,
+      "greedy": false,
+      "runs": 3,
+      "warmup": 1,
+      "avg_eval_tps": 8.3,
+      "std_eval_tps": 0.0,
+      "avg_tokens": 0,
+      "avg_wall_sec": 37.466,
+      "cuda_model_mib": 5540.0,
+      "avg_prompt_tps": 131.967,
+      "avg_image_tokens": null,
+      "avg_image_encode_ms": null,
+      "avg_image_decode_ms": null,
+      "avg_prompt_eval_ms": null,
+      "avg_prompt_tokens": null,
+      "avg_total_ms": null,
+      "all_runs": [
+        {
+          "prompt_tps": 128.4,
+          "eval_tps": 8.4,
+          "cuda_model_mib": 5540.0,
+          "wall_time_sec": 37.164,
+          "response_preview": "ransformers and Recurrent Neural Networks (RNNs) are two dominant architectures in the field of sequence modeling, particularly for tasks like machine translation, text generation, and time series analysis. While both aim to understand relationships between elements in a sequence, their underlying m",
+          "phase": "warmup",
+          "run": 1
+        },
+        {
+          "prompt_tps": 130.8,
+          "eval_tps": 8.3,
+          "cuda_model_mib": 5540.0,
+          "wall_time_sec": 37.352,
+          "response_preview": "ransformer and Recurrent Neural Networks (RNNs) are two foundational architectures in deep learning for processing sequential data, such as text, speech, and time-series data. While both aim to model sequences, they differ fundamentally in their **computational mechanisms**, **handling of long-term ",
+          "phase": "measured",
+          "run": 2
+        },
+        {
+          "prompt_tps": 130.6,
+          "eval_tps": 8.3,
+          "cuda_model_mib": 5540.0,
+          "wall_time_sec": 37.524,
+          "response_preview": "oth **Transformers** and **Recurrent Neural Networks (RNNs)** are foundational architectures in deep learning, primarily used for processing sequential data like text, speech, and time-series. However, they differ fundamentally in how they process information, their computational efficiency, and the",
+          "phase": "measured",
+          "run": 3
+        },
+        {
+          "prompt_tps": 134.5,
+          "eval_tps": 8.3,
+          "cuda_model_mib": 5540.0,
+          "wall_time_sec": 37.521,
+          "response_preview": "ransformers and Recurrent Neural Networks (RNNs) are both foundational architectures in deep learning, primarily used for sequence modeling tasks like machine translation, text generation, and time-series prediction. However, they differ fundamentally in how they process sequential data, handle info",
+          "phase": "measured",
+          "run": 4
+        }
+      ]
+    },
+    {
+      "name": "text_greedy_64",
+      "prompt": "Give me a short introduction to large language models.",
+      "image_path": null,
+      "max_new_tokens": 64,
+      "greedy": true,
+      "runs": 3,
+      "warmup": 1,
+      "avg_eval_tps": 8.4,
+      "std_eval_tps": 0.0,
+      "avg_tokens": 0,
+      "avg_wall_sec": 14.24,
+      "cuda_model_mib": 5540.0,
+      "avg_prompt_tps": 114.567,
+      "avg_image_tokens": null,
+      "avg_image_encode_ms": null,
+      "avg_image_decode_ms": null,
+      "avg_prompt_eval_ms": null,
+      "avg_prompt_tokens": null,
+      "avg_total_ms": null,
+      "all_runs": [
+        {
+          "prompt_tps": 115.6,
+          "eval_tps": 8.4,
+          "cuda_model_mib": 5540.0,
+          "wall_time_sec": 14.335,
+          "response_preview": "*Large Language Models (LLMs)** are advanced artificial intelligence systems designed to understand, generate, and manipulate human language. They are built upon **deep learning** architectures, most notably the **Transformer**, which allows them to process vast amounts of text data to identify patt",
+          "phase": "warmup",
+          "run": 1
+        },
+        {
+          "prompt_tps": 114.8,
+          "eval_tps": 8.4,
+          "cuda_model_mib": 5540.0,
+          "wall_time_sec": 14.275,
+          "response_preview": "*Large Language Models (LLMs)** are advanced artificial intelligence systems designed to understand, generate, and manipulate human language. They are built upon **deep learning** architectures, most notably the **Transformer**, which allows them to process vast amounts of text data to identify patt",
+          "phase": "measured",
+          "run": 2
+        },
+        {
+          "prompt_tps": 114.2,
+          "eval_tps": 8.4,
+          "cuda_model_mib": 5540.0,
+          "wall_time_sec": 14.225,
+          "response_preview": "*Large Language Models (LLMs)** are advanced artificial intelligence systems designed to understand, generate, and manipulate human language. They are built upon **deep learning** architectures, most notably the **Transformer**, which allows them to process vast amounts of text data to identify patt",
+          "phase": "measured",
+          "run": 3
+        },
+        {
+          "prompt_tps": 114.7,
+          "eval_tps": 8.4,
+          "cuda_model_mib": 5540.0,
+          "wall_time_sec": 14.22,
+          "response_preview": "*Large Language Models (LLMs)** are advanced artificial intelligence systems designed to understand, generate, and manipulate human language. They are built upon **deep learning** architectures, most notably the **Transformer**, which allows them to process vast amounts of text data to identify patt",
+          "phase": "measured",
+          "run": 4
+        }
+      ]
+    },
+    {
+      "name": "vl_caption_64",
+      "prompt": "Describe this scene in one concise sentence.",
+      "image_path": "data/test.jpg",
+      "max_new_tokens": 64,
+      "greedy": true,
+      "runs": 3,
+      "warmup": 1,
+      "avg_eval_tps": 8.175,
+      "std_eval_tps": 0.177,
+      "avg_tokens": 25,
+      "avg_wall_sec": 13.006,
+      "cuda_model_mib": 4861.28,
+      "avg_prompt_tps": 122.73,
+      "avg_image_tokens": 405,
+      "avg_image_encode_ms": 1366,
+      "avg_image_decode_ms": 1397.5,
+      "avg_prompt_eval_ms": 3544.54,
+      "avg_prompt_tokens": 435,
+      "avg_total_ms": 8489.61,
+      "all_runs": [
+        {
+          "cuda_model_mib": 4861.28,
+          "cpu_model_mib": 545.62,
+          "wall_time_sec": 6.451,
+          "response_preview": "",
+          "error": "arams+0x138)[0xffff82c363e8]\nllama.cpp/build/bin/libmtmd.so.0(mtmd_init_from_file+0x254)[0xffff82bc7554]\nllama.cpp/build/bin/llama-mtmd-cli(+0x34b64)[0xaaaae2cc4b64]\nllama.cpp/build/bin/llama-mtmd-cli(+0x2c9dc)[0xaaaae2cbc9dc]\n/lib/aarch64-linux-gnu/libc.so.6(+0x27400)[0xffff823c7400]\n/lib/aarch64-linux-gnu/libc.so.6(__libc_start_main+0x98)[0xffff823c74d8]\nllama.cpp/build/bin/llama-mtmd-cli(+0x30b30)[0xaaaae2cc0b30]\n",
+          "phase": "warmup",
+          "run": 1
+        },
+        {
+          "load_time_ms": 4255.98,
+          "prompt_eval_time_ms": 3526.09,
+          "prompt_tokens": 435,
+          "prompt_ms_per_token": 8.11,
+          "prompt_tps": 123.37,
+          "eval_time_ms": 3012.47,
+          "eval_tokens": 25,
+          "eval_ms_per_token": 120.5,
+          "eval_tps": 8.3,
+          "total_time_ms": 8250.72,
+          "total_tokens": 460,
+          "cuda_model_mib": 4861.28,
+          "cpu_model_mib": 545.62,
+          "image_encode_ms": 1362,
+          "image_decode_ms": 1397,
+          "image_tokens": 405,
+          "wall_time_sec": 14.805,
+          "response_preview": "An aerial view captures several people walking along a wide, paved pathway bordered by grassy areas and trees.",
+          "phase": "measured",
+          "run": 2
+        },
+        {
+          "cuda_model_mib": 4861.28,
+          "cpu_model_mib": 545.62,
+          "wall_time_sec": 9.13,
+          "response_preview": "",
+          "error": "arams+0x138)[0xffff85ca63e8]\nllama.cpp/build/bin/libmtmd.so.0(mtmd_init_from_file+0x254)[0xffff85c37554]\nllama.cpp/build/bin/llama-mtmd-cli(+0x34b64)[0xaaaad8e84b64]\nllama.cpp/build/bin/llama-mtmd-cli(+0x2c9dc)[0xaaaad8e7c9dc]\n/lib/aarch64-linux-gnu/libc.so.6(+0x27400)[0xffff85437400]\n/lib/aarch64-linux-gnu/libc.so.6(__libc_start_main+0x98)[0xffff854374d8]\nllama.cpp/build/bin/llama-mtmd-cli(+0x30b30)[0xaaaad8e80b30]\n",
+          "phase": "measured",
+          "run": 3
+        },
+        {
+          "load_time_ms": 4145.66,
+          "prompt_eval_time_ms": 3562.99,
+          "prompt_tokens": 435,
+          "prompt_ms_per_token": 8.19,
+          "prompt_tps": 122.09,
+          "eval_time_ms": 3105.82,
+          "eval_tokens": 25,
+          "eval_ms_per_token": 124.23,
+          "eval_tps": 8.05,
+          "total_time_ms": 8728.5,
+          "total_tokens": 460,
+          "cuda_model_mib": 4861.28,
+          "cpu_model_mib": 545.62,
+          "image_encode_ms": 1370,
+          "image_decode_ms": 1398,
+          "image_tokens": 405,
+          "wall_time_sec": 15.083,
+          "response_preview": "An aerial view captures several people walking along a wide, paved pathway bordered by grassy areas and trees.",
+          "phase": "measured",
+          "run": 4
+        }
+      ]
+    },
+    {
+      "name": "vl_detail_256",
+      "prompt": "Describe this image in detail. Include information about objects, people, actions, and the environment.",
+      "image_path": "data/test.jpg",
+      "max_new_tokens": 256,
+      "greedy": false,
+      "runs": 3,
+      "warmup": 1,
+      "avg_eval_tps": 0,
+      "std_eval_tps": 0.0,
+      "avg_tokens": 0,
+      "avg_wall_sec": 5.698,
+      "cuda_model_mib": 4861.28,
+      "avg_prompt_tps": null,
+      "avg_image_tokens": null,
+      "avg_image_encode_ms": null,
+      "avg_image_decode_ms": null,
+      "avg_prompt_eval_ms": null,
+      "avg_prompt_tokens": null,
+      "avg_total_ms": null,
+      "all_runs": [
+        {
+          "cuda_model_mib": 4861.28,
+          "cpu_model_mib": 545.62,
+          "wall_time_sec": 8.671,
+          "response_preview": "",
+          "error": "1.00 MiB on device 0: cudaMalloc failed: out of memory\nggml_gallocr_reserve_n_impl: failed to allocate CUDA0 buffer of size 525336576\ngraph_reserve: failed to allocate compute buffers\nllama_init_from_model: failed to initialize the context: failed to allocate compute pp buffers\ncommon_init_result: failed to create context with model 'models/Qwen3.5-9B-Q4_K_M.gguf'\ncommon_init_from_params: failed to create context with model 'models/Qwen3.5-9B-Q4_K_M.gguf'\n",
+          "phase": "warmup",
+          "run": 1
+        },
+        {
+          "cuda_model_mib": 4861.28,
+          "cpu_model_mib": 545.62,
+          "wall_time_sec": 5.643,
+          "response_preview": "",
+          "error": "1.00 MiB on device 0: cudaMalloc failed: out of memory\nggml_gallocr_reserve_n_impl: failed to allocate CUDA0 buffer of size 525336576\ngraph_reserve: failed to allocate compute buffers\nllama_init_from_model: failed to initialize the context: failed to allocate compute pp buffers\ncommon_init_result: failed to create context with model 'models/Qwen3.5-9B-Q4_K_M.gguf'\ncommon_init_from_params: failed to create context with model 'models/Qwen3.5-9B-Q4_K_M.gguf'\n",
+          "phase": "measured",
+          "run": 2
+        },
+        {
+          "cuda_model_mib": 4861.28,
+          "cpu_model_mib": 545.62,
+          "wall_time_sec": 5.647,
+          "response_preview": "",
+          "error": "1.00 MiB on device 0: cudaMalloc failed: out of memory\nggml_gallocr_reserve_n_impl: failed to allocate CUDA0 buffer of size 525336576\ngraph_reserve: failed to allocate compute buffers\nllama_init_from_model: failed to initialize the context: failed to allocate compute pp buffers\ncommon_init_result: failed to create context with model 'models/Qwen3.5-9B-Q4_K_M.gguf'\ncommon_init_from_params: failed to create context with model 'models/Qwen3.5-9B-Q4_K_M.gguf'\n",
+          "phase": "measured",
+          "run": 3
+        },
+        {
+          "cuda_model_mib": 4861.28,
+          "cpu_model_mib": 545.62,
+          "wall_time_sec": 5.805,
+          "response_preview": "",
+          "error": "1.00 MiB on device 0: cudaMalloc failed: out of memory\nggml_gallocr_reserve_n_impl: failed to allocate CUDA0 buffer of size 525336576\ngraph_reserve: failed to allocate compute buffers\nllama_init_from_model: failed to initialize the context: failed to allocate compute pp buffers\ncommon_init_result: failed to create context with model 'models/Qwen3.5-9B-Q4_K_M.gguf'\ncommon_init_from_params: failed to create context with model 'models/Qwen3.5-9B-Q4_K_M.gguf'\n",
+          "phase": "measured",
+          "run": 4
+        }
+      ]
+    },
+    {
+      "name": "quality_intro",
+      "prompt": "Give me a short introduction to large language models.",
+      "image_path": null,
+      "max_new_tokens": 64,
+      "greedy": false,
+      "runs": 1,
+      "warmup": 0,
+      "avg_eval_tps": 0,
+      "std_eval_tps": 0.0,
+      "avg_tokens": 0,
+      "avg_wall_sec": 5.814,
+      "cuda_model_mib": null,
+      "avg_prompt_tps": null,
+      "avg_image_tokens": null,
+      "avg_image_encode_ms": null,
+      "avg_image_decode_ms": null,
+      "avg_prompt_eval_ms": null,
+      "avg_prompt_tokens": null,
+      "avg_total_ms": null,
+      "all_runs": [
+        {
+          "wall_time_sec": 5.814,
+          "response_preview": "",
+          "error": "1.00 MiB on device 0: cudaMalloc failed: out of memory\nggml_gallocr_reserve_n_impl: failed to allocate CUDA0 buffer of size 525336576\ngraph_reserve: failed to allocate compute buffers\nllama_init_from_model: failed to initialize the context: failed to allocate compute pp buffers\ncommon_init_result: failed to create context with model 'models/Qwen3.5-9B-Q4_K_M.gguf'\ncommon_init_from_params: failed to create context with model 'models/Qwen3.5-9B-Q4_K_M.gguf'\n",
+          "phase": "measured",
+          "run": 1
+        }
+      ]
+    },
+    {
+      "name": "quality_korean",
+      "prompt": "Answer in Korean with exactly three bullet points: what is overfitting?",
+      "image_path": null,
+      "max_new_tokens": 96,
+      "greedy": false,
+      "runs": 1,
+      "warmup": 0,
+      "avg_eval_tps": 8.4,
+      "std_eval_tps": 0.0,
+      "avg_tokens": 0,
+      "avg_wall_sec": 18.402,
+      "cuda_model_mib": 5540.0,
+      "avg_prompt_tps": 117.4,
+      "avg_image_tokens": null,
+      "avg_image_encode_ms": null,
+      "avg_image_decode_ms": null,
+      "avg_prompt_eval_ms": null,
+      "avg_prompt_tokens": null,
+      "avg_total_ms": null,
+      "all_runs": [
+        {
+          "prompt_tps": 117.4,
+          "eval_tps": 8.4,
+          "cuda_model_mib": 5540.0,
+          "wall_time_sec": 18.402,
+          "response_preview": "과적합은 모델이 학습 데이터의 잡음이나 세부적인 패턴까지 지나치게 따라 배우며 새로운 데이터에 대한 일반화 성능이 떨어지는 현상입니다.\n* 이는 모델이 너무 복잡해져서 훈련 데이터에 대해서는 높은 정확도를 보이지만, 검증 데이터나 실제 상황에서 오류율이 급격히 상승하는 특징을 가집니다.\n* 과적합을 방지하기 위해 정규화 적용, 데이터 양 증가, 드롭아웃 또는 교차",
+          "phase": "measured",
+          "run": 1
+        }
+      ]
+    },
+    {
+      "name": "quality_json",
+      "prompt": "Return only valid JSON with keys answer and confidence for the question: What does CPU stand for?",
+      "image_path": null,
+      "max_new_tokens": 64,
+      "greedy": false,
+      "runs": 1,
+      "warmup": 0,
+      "avg_eval_tps": 8.6,
+      "std_eval_tps": 0.0,
+      "avg_tokens": 0,
+      "avg_wall_sec": 9.481,
+      "cuda_model_mib": 5540.0,
+      "avg_prompt_tps": 140.2,
+      "avg_image_tokens": null,
+      "avg_image_encode_ms": null,
+      "avg_image_decode_ms": null,
+      "avg_prompt_eval_ms": null,
+      "avg_prompt_tokens": null,
+      "avg_total_ms": null,
+      "all_runs": [
+        {
+          "prompt_tps": 140.2,
+          "eval_tps": 8.6,
+          "cuda_model_mib": 5540.0,
+          "wall_time_sec": 9.481,
+          "response_preview": "\"answer\": \"Central Processing Unit\",\n  \"confidence\": 1.0\n}",
+          "phase": "measured",
+          "run": 1
+        }
+      ]
+    },
+    {
+      "name": "quality_2sent",
+      "prompt": "Summarize why caching is useful in web services in exactly two sentences.",
+      "image_path": null,
+      "max_new_tokens": 80,
+      "greedy": false,
+      "runs": 1,
+      "warmup": 0,
+      "avg_eval_tps": 8.5,
+      "std_eval_tps": 0.0,
+      "avg_tokens": 0,
+      "avg_wall_sec": 12.448,
+      "cuda_model_mib": 5540.0,
+      "avg_prompt_tps": 131.3,
+      "avg_image_tokens": null,
+      "avg_image_encode_ms": null,
+      "avg_image_decode_ms": null,
+      "avg_prompt_eval_ms": null,
+      "avg_prompt_tokens": null,
+      "avg_total_ms": null,
+      "all_runs": [
+        {
+          "prompt_tps": 131.3,
+          "eval_tps": 8.5,
+          "cuda_model_mib": 5540.0,
+          "wall_time_sec": 12.448,
+          "response_preview": "aching stores frequently requested data to reduce the load on backend servers and minimize response times for users. This approach significantly improves overall application scalability and performance by serving responses from memory rather than recalculating or re-fetching data for every request.",
+          "phase": "measured",
+          "run": 1
+        }
+      ]
+    }
+  ]
+}

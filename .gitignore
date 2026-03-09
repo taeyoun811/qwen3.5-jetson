@@ -1,0 +1,6 @@
+models/*.gguf
+llama.cpp/
+.cache/
+.claude/
+__pycache__/
+*.pyc
