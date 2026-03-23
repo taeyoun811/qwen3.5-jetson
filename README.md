@@ -218,7 +218,28 @@ Target files: `src/llama-memory-recurrent.cpp` (+184/-22), `src/llama-memory-rec
   - 0.8B is also a VL model, enabling image+text speculative decoding
 - **Ref**: [PR #19493](https://github.com/ggml-org/llama.cpp/pull/19493) (2026-02-10) — server-level checkpoint approach, alternative. Explicitly does not support mmproj
 
-### 2. Native MTP (Multi-Token Prediction)
+### 2. Visual Token Reduction Fine-tuning
+
+- **Status**: Research — based on [ARGUSVLM paper](https://arxiv.org/abs/2603.16987) (2026-03-17, Sony AI)
+- **Insight**: Paper showed 64 visual tokens (r=4 pixel-unshuffle) sufficient for general VQA (GQA 55.3 on 256M model). Our binary classification task (bicycle yes/no) likely needs even fewer
+- **Problem**: Current `--image-max-tokens 256` truncates at inference time → accuracy drops (exp3: 96%→92% recall). Model was trained for ~400 tokens, doesn't know how to use fewer
+- **Approach**: Add learned compression between ViT output and LLM input, then fine-tune
+  - **Option A**: Average Pooling (simpler) — pool ViT output to 64 tokens, dimension unchanged, MLP fine-tune only
+  - **Option B**: Pixel-Unshuffle (better quality) — r=2 spatial merge, but Qwen3.5 dynamic tiling makes grid handling complex
+  - Average Pooling recommended as first attempt for our task
+- **Training**: ViT frozen, LLM frozen (or LoRA), only MLP/connector retrained on public VQA data + task-specific data
+- **Expected TTFT impact** (2B, Q8_0 mmproj, Jetson):
+  - 231 tokens (current): Encoding 336ms + Prefill 780ms = **~1,116ms**
+  - 64 tokens (after FT): Encoding 336ms + Prefill ~215ms = **~551ms** (-50%)
+- **Caveat**: Requires mmproj GGUF regeneration (`convert_hf_to_gguf.py --mmproj` may need modification for new layer)
+
+### 3. Additional Insights from ARGUSVLM Paper
+
+- **Quantization caution**: Paper found W8A8 **slower** than BF16 on compact VLMs (256M). Activation quantization overhead > matmul savings. Validates our finding that mmproj below Q8_0 breaks vision quality — current Q4_K_M + mmproj Q8_0 is the sweet spot
+- **Bottleneck shift**: As model shrinks, non-GPU operations dominate latency. In our llama.cpp setup, the analog is process restart/model reload (not Python CPU preprocessing). Reinforces priority of llama-server mode
+- **Profile-first methodology**: Paper's systematic approach (austin for CPU, Nsight for GPU) aligns with our CUDA event profiling in `profile_forward.py`
+
+### 4. Native MTP (Multi-Token Prediction)
 
 - **Status**: Not implemented in llama.cpp (MTP tensors intentionally skipped during GGUF conversion)
 - Qwen3.5 HF models contain MTP weights (`mtp_num_hidden_layers: 1`, `mtp.layers.0.*`, `mtp.fc.weight`, etc.)
